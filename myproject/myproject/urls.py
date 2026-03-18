@@ -20,9 +20,9 @@ from django.urls import path
 from todo import views
 
 urlpatterns = [
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('todo/', views.TodoListApi.as_view()),
     path('todo/<int:pk>', views.TodoListApi1.as_view()),
-
-
 ]
+

@@ -8,6 +8,10 @@ from .serializers import Todoserializer
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'todo/home.html')
+
+
 class TodoListApi(APIView):
     def post(self,request):
         serializer=Todoserializer(data=request.data)
